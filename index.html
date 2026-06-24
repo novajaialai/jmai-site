@@ -97,6 +97,20 @@
   .cta-band .btn{background:var(--accent);}
   .cta-band .btn:hover{background:#fff;color:var(--ink);}
 
+  /* contact form */
+  .form-wrap{max-width:620px;margin:36px auto 0;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block;font-weight:600;font-size:14.5px;margin-bottom:7px;color:var(--ink);}
+  .form-row input,.form-row textarea{
+    width:100%;font-family:inherit;font-size:16px;color:var(--ink);
+    background:var(--bg);border:1px solid var(--line);border-radius:10px;
+    padding:12px 14px;transition:border-color .15s ease;
+  }
+  .form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--accent);}
+  .form-row textarea{resize:vertical;min-height:140px;}
+  .form-submit{width:100%;border:none;cursor:pointer;}
+  .form-divider{text-align:center;color:var(--ink-soft);font-size:15px;margin:44px 0 0;}
+
   footer{padding:40px 0;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14.5px;}
   .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 </style>
@@ -185,6 +199,24 @@
         <p>Book a free call and I'll point out the repetitive work in your business that AI could be handling — even if we never work together.</p>
         <a class="btn btn-lg" href="https://calendly.com/jacobdart" target="_blank" rel="noopener">Book a free call</a>
       </div>
+
+      <p class="form-divider">Prefer to write instead? Send me a message and I'll get back to you.</p>
+
+      <form class="form-wrap" action="https://formspree.io/f/mdarapye" method="POST">
+        <div class="form-row">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="_subject" placeholder="What's this about?">
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me a bit about your business and what you're hoping to automate." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-lg form-submit">Send message</button>
+      </form>
     </div>
   </section>
 </main>
