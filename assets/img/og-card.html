@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"SS4";src:url("../fonts/SourceSerif4-Semibold.woff2");font-weight:600}
+@font-face{font-family:"SS4";src:url("../fonts/SourceSerif4-Italic.woff2");font-weight:600;font-style:italic}
+@font-face{font-family:"RHT";src:url("../fonts/RedHatText-Medium.woff2");font-weight:500}
+@font-face{font-family:"RHT";src:url("../fonts/RedHatText-SemiBold.woff2");font-weight:600}
+*{margin:0;box-sizing:border-box}
+body{width:1200px;height:630px;background:#f7f5ef;font-family:"RHT",sans-serif;color:#19222e;overflow:hidden;position:relative}
+.edge{position:absolute;top:0;left:0;width:100%;height:8px;background:#1c3c74}
+.pad{position:absolute;inset:64px 70px;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:16px}
+.tile{width:54px;height:54px;border-radius:13px;background:#1c3c74;position:relative;flex:0 0 auto}
+.tile svg{position:absolute;inset:0}
+.brand{font-family:"SS4",serif;font-weight:600;font-size:30px;letter-spacing:-.01em}
+.sub{font-family:"RHT";font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#8b9099;border-left:1px solid #ded7c6;padding-left:16px;margin-left:4px}
+.mid{margin-top:auto}
+h1{font-family:"SS4",serif;font-weight:600;font-size:74px;line-height:1.02;letter-spacing:-.018em;max-width:18ch}
+h1 em{font-style:italic;color:#1c3c74}
+.tag{font-size:25px;color:#5c6470;margin-top:26px;max-width:30ch;line-height:1.45}
+.foot{margin-top:30px;display:flex;align-items:center;gap:14px;font-size:18px;color:#1c3c74;font-weight:600}
+.foot .pill{background:rgba(28,60,116,.07);border:1px solid #ded7c6;border-radius:999px;padding:7px 16px;font-weight:600;color:#19222e}
+.nodes{position:absolute;right:-40px;top:80px;opacity:.5}
+</style></head><body>
+<div class="edge"></div>
+<svg class="nodes" width="520" height="470" viewBox="0 0 520 470" fill="none">
+  <path d="M40 430 L180 320 L300 360 L420 200 L500 60" stroke="#1c3c74" stroke-width="2" opacity=".35"/>
+  <circle cx="40" cy="430" r="7" fill="#1c3c74" opacity=".5"/>
+  <circle cx="180" cy="320" r="7" fill="#1c3c74" opacity=".55"/>
+  <circle cx="300" cy="360" r="7" fill="#1c3c74" opacity=".5"/>
+  <circle cx="420" cy="200" r="8" fill="#1c3c74" opacity=".6"/>
+  <circle cx="500" cy="60" r="10" fill="#b9852f"/>
+</svg>
+<div class="pad">
+  <div class="top">
+    <span class="tile"><svg width="54" height="54" viewBox="0 0 32 32"><path d="M9 23 L16 16 L23 9" fill="none" stroke="#f7f5ef" stroke-width="1.7" stroke-linecap="round" opacity=".55"/><circle cx="9" cy="23" r="2.7" fill="#f7f5ef"/><circle cx="16" cy="16" r="2.7" fill="#f7f5ef"/><circle cx="23" cy="9" r="3" fill="#e7c886"/></svg></span>
+    <span class="brand">Jacob Dart</span>
+    <span class="sub">J&amp;M AI Services</span>
+  </div>
+  <div class="mid">
+    <h1>Turn your business into an <em>operating system.</em></h1>
+    <p class="tag">Calm, compounding systems you own — built with you, until they run without you.</p>
+    <div class="foot"><span class="pill">AI automation for owner-operators</span> <span>jacobdart.com</span></div>
+  </div>
+</div>
+</body></html>
