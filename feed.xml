@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jacob Dart — Writing</title>
+    <link>https://jacobdart.com/blog/</link>
+    <atom:link href="https://jacobdart.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Field notes on turning owner-operator businesses into calm, compounding systems — automation, AI, and the operating-system mindset.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>The system is you — and that&#x27;s the problem</title>
+      <link>https://jacobdart.com/blog/the-system-is-you/</link>
+      <guid isPermaLink="true">https://jacobdart.com/blog/the-system-is-you/</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 +0000</pubDate>
+      <description>If your business would quietly break the moment you stepped away, you don&#x27;t own a business — you own a job. Here&#x27;s the test, where the work hides, and the first step out.</description>
+    </item>
+  </channel>
+</rss>

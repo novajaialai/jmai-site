@@ -1,0 +1,80 @@
+/* ============================================================
+   blog.css — editorial long-form for jacobdart.com /blog/
+   Loads only on blog pages; built on the tokens in site.css.
+   ============================================================ */
+
+/* current-page nav state */
+.nav-links a[aria-current]{color:var(--ink)}
+
+/* ---- index header ---- */
+.blog-head{padding:clamp(56px,9vw,98px) 0 clamp(18px,3.5vw,30px)}
+.blog-head .eyebrow{margin-bottom:14px}
+.blog-head h1{font-size:clamp(36px,5.6vw,58px);line-height:1.03;margin:0 0 16px}
+.blog-head .lead{max-width:640px}
+
+/* ---- index post list ---- */
+.post-list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.post-item{display:block;padding:clamp(24px,3.4vw,34px) 0;border-bottom:1px solid var(--line)}
+.post-item:hover .post-title{color:var(--accent-2)}
+.post-meta{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:13px;
+  color:var(--faint);letter-spacing:.02em;margin-bottom:11px}
+.post-meta .sep{color:var(--line-2)}
+.post-title{font-family:var(--serif);font-weight:600;font-size:clamp(23px,2.9vw,31px);line-height:1.12;
+  color:var(--ink);letter-spacing:-.014em;margin:0 0 10px;transition:color .15s ease}
+.post-dek{color:var(--muted);font-size:16.5px;line-height:1.55;max-width:64ch;margin:0 0 14px}
+.post-more{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:600;color:var(--accent)}
+.post-more .arr,.back-link .arr{transition:transform .18s ease}
+.post-item:hover .post-more .arr{transform:translateX(3px)}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag-chip{font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);background:var(--accent-soft);
+  border:1px solid var(--line-2);padding:3px 11px;border-radius:999px}
+
+/* ---- article ---- */
+.article{padding:clamp(38px,6vw,66px) 0 clamp(48px,8vw,84px)}
+.article-head{max-width:var(--readw);margin:0 auto clamp(26px,4vw,38px)}
+.article-head h1{font-size:clamp(31px,4.8vw,50px);line-height:1.06;margin:12px 0 0;letter-spacing:-.014em}
+.article-head .dek{font-size:clamp(18px,2.2vw,21px);line-height:1.5;color:var(--ink-soft);margin:18px 0 0;max-width:62ch}
+.back-link{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.back-link:hover{color:var(--accent)}
+.back-link:hover .arr{transform:translateX(-3px)}
+
+/* ---- prose ---- */
+.prose{max-width:var(--readw);margin:0 auto;font-size:18px;line-height:1.78;color:var(--ink-soft)}
+.prose p,.prose ul,.prose ol,.prose pre,.prose img,.prose hr{margin:0 0 1.2em}
+.prose > :first-child{margin-top:0}
+.prose > :last-child{margin-bottom:0}
+.prose h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3.2vw,32px);line-height:1.18;
+  color:var(--ink);letter-spacing:-.012em;margin:1.9em 0 .55em}
+.prose h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.3;color:var(--ink);margin:1.6em 0 .45em}
+.prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;
+  text-decoration-thickness:1px;text-decoration-color:var(--line-2)}
+.prose a:hover{color:var(--accent-2);text-decoration-color:var(--accent-2)}
+.prose strong{color:var(--ink);font-weight:600}
+.prose em{font-style:italic}
+.prose ul,.prose ol{padding-left:1.3em}
+.prose li{margin:.42em 0}
+.prose li > ul,.prose li > ol{margin:.3em 0 0}
+.prose li::marker{color:var(--faint)}
+.prose ul li::marker{color:var(--accent)}
+.prose blockquote{margin:1.7em 0;padding:2px 0 2px 22px;border-left:3px solid var(--accent);
+  font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.5;color:var(--ink)}
+.prose blockquote p{margin:0}
+.prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.85em;
+  background:var(--bg-tint);border:1px solid var(--line);border-radius:6px;padding:.12em .42em}
+.prose pre{background:var(--ink);color:#e7eaef;border-radius:var(--radius-sm);padding:18px 20px;
+  overflow:auto;font-size:14.5px;line-height:1.6}
+.prose pre code{background:none;border:0;padding:0;font-size:inherit;color:inherit}
+.prose img{border-radius:var(--radius-sm);border:1px solid var(--line);margin:1.7em auto}
+.prose hr{height:1px;background:var(--line);border:0;margin:2.3em 0}
+.prose .headerlink{display:none}  /* toc anchor links from python-markdown */
+
+/* tags under an article */
+.article .tags{max-width:var(--readw);margin:clamp(26px,4vw,36px) auto 0}
+
+/* ---- end-of-post CTA ---- */
+.post-cta{max-width:var(--readw);margin:clamp(38px,6vw,60px) auto 0;padding-top:clamp(26px,4vw,38px);
+  border-top:1px solid var(--line)}
+.post-cta .eyebrow{margin-bottom:10px}
+.post-cta h3{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--ink);letter-spacing:-.01em;margin:0 0 8px}
+.post-cta p{margin:0 0 20px;font-size:16.5px;max-width:54ch}
