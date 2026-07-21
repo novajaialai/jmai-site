@@ -260,9 +260,3 @@ p{margin:0 0 16px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;z-index:100}
 .skip:focus{left:0}
-
-/* ---- 4-rung ladder variant (same offer-card look, one more column) ---- */
-.offers-4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:1080px){.offers-4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.offers-4{grid-template-columns:1fr}}
-.offer .price.free{color:var(--sand)}

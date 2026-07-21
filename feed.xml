@@ -6,7 +6,14 @@
     <atom:link href="https://jacobdart.com/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Field notes on turning owner-operator businesses into calm, compounding systems — automation, AI, and the operating-system mindset.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Who actually sees your AI prompts?</title>
+      <link>https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/</link>
+      <guid isPermaLink="true">https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/</guid>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+      <description>You don&#x27;t need a $30k server to keep your business data private when you use AI. You need to know who&#x27;s in the request path. Here&#x27;s the four-tier ladder I use, from &#x27;they read everything by design&#x27; to &#x27;nobody can see it, provably.&#x27;</description>
+    </item>
     <item>
       <title>The system is you — and that&#x27;s the problem</title>
       <link>https://jacobdart.com/blog/the-system-is-you/</link>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who actually sees your AI prompts? — Jacob Dart</title>
+<meta name="description" content="You don&#x27;t need a $30k server to keep your business data private when you use AI. You need to know who&#x27;s in the request path. Here&#x27;s the four-tier ladder I use, from &#x27;they read everything by design&#x27; to &#x27;nobody can see it, provably.&#x27;">
+<link rel="canonical" href="https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/">
+<meta name="theme-color" content="#1c3c74">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/">
+<meta property="og:title" content="Who actually sees your AI prompts?">
+<meta property="og:description" content="You don&#x27;t need a $30k server to keep your business data private when you use AI. You need to know who&#x27;s in the request path. Here&#x27;s the four-tier ladder I use, from &#x27;they read everything by design&#x27; to &#x27;nobody can see it, provably.&#x27;">
+<meta property="og:image" content="https://jacobdart.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="J&M AI Services">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Who actually sees your AI prompts?">
+<meta name="twitter:description" content="You don&#x27;t need a $30k server to keep your business data private when you use AI. You need to know who&#x27;s in the request path. Here&#x27;s the four-tier ladder I use, from &#x27;they read everything by design&#x27; to &#x27;nobody can see it, provably.&#x27;">
+<meta name="twitter:image" content="https://jacobdart.com/assets/img/og-image.png">
+<meta property="article:published_time" content="2026-07-21">
+<meta property="article:author" content="Jacob Dart">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Jacob Dart — Writing" href="/feed.xml">
+<link rel="preload" href="/assets/fonts/SourceSerif4-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/RedHatText-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/blog.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BlogPosting",
+  "headline":"Who actually sees your AI prompts?",
+  "description":"You don't need a $30k server to keep your business data private when you use AI. You need to know who's in the request path. Here's the four-tier ladder I use, from 'they read everything by design' to 'nobody can see it, provably.'",
+  "datePublished":"2026-07-21",
+  "dateModified":"2026-07-21",
+  "author":{"@type":"Person","name":"Jacob Dart","url":"https://jacobdart.com/about/"},
+  "publisher":{"@type":"Organization","name":"J&M AI Services","url":"https://jacobdart.com/"},
+  "mainEntityOfPage":{"@type":"WebPage","@id":"https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/"},
+  "image":"https://jacobdart.com/assets/img/og-image.png",
+  "url":"https://jacobdart.com/blog/who-actually-sees-your-ai-prompts/"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Jacob Dart — J&amp;M AI Services, home">
+      <img class="mark" src="/assets/img/mark.svg" alt="" width="30" height="30">
+      Jacob Dart
+      <span class="sub">J&amp;M AI Services</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/#problem">The problem</a>
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/blog/" aria-current="page">Writing</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="https://calendly.com/jacobdart" target="_blank" rel="noopener">Book a call <span class="arr">&rarr;</span></a>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <article class="article">
+    <div class="wrap">
+      <div class="article-head">
+        <a class="back-link" href="/blog/"><span class="arr">&larr;</span> All writing</a>
+        <div class="post-meta">
+          <time datetime="2026-07-21">July 21, 2026</time>
+          <span class="sep">&middot;</span><span>4 min read</span>
+        </div>
+        <h1>Who actually sees your AI prompts?</h1>
+        <p class="dek">You don&#x27;t need a $30k server to keep your business data private when you use AI. You need to know who&#x27;s in the request path. Here&#x27;s the four-tier ladder I use, from &#x27;they read everything by design&#x27; to &#x27;nobody can see it, provably.&#x27;</p>
+      </div>
+      <div class="prose">
+        <p>A question I keep running into — and kept asking myself: if you don&rsquo;t have the hardware to run a serious AI model at home, can you rent someone else&rsquo;s and keep your data private?</p>
+        <p>The answer is yes. But &ldquo;rented hardware&rdquo; covers everything from <em>genuinely private</em> to <em>a company&rsquo;s software reads every word you send it</em>, and most people have no idea which one they&rsquo;re using.</p>
+        <p>Here&rsquo;s the test that cuts through all of it: <strong>who&rsquo;s in the request path?</strong> Not who <em>promises</em> what. Who actually touches your data on its way to the model.</p>
+        <h2 id="the-four-tiers">The four tiers</h2>
+        <p><strong>Tier 1: An AI service&rsquo;s API.</strong> This is what almost everybody uses — you send your prompt to a provider and their model answers. Understand what that means: your data arrives at their servers in plain text and runs through <em>their</em> software. They process every word <strong>by design</strong> — that&rsquo;s literally how the product works. &ldquo;Zero data retention&rdquo; agreements are real and worth having, but read what they actually say: <em>we promise not to store or train on it.</em> Not: <em>we can&rsquo;t see it.</em> Their code is the thing reading it. That&rsquo;s paperwork security, not architecture.</p>
+        <p><strong>Tier 2: Rented GPUs running your own model.</strong> This is the tier most people don&rsquo;t know exists. You rent raw compute from a datacenter, install an open-weights model yourself, and point your tools at your own endpoint. Now there&rsquo;s no company in the request path — the model is just files on a machine you control, and traffic goes encrypted straight to your own software. What&rsquo;s left is the landlord risk: whoever owns the physical machine <em>could</em> go after your data, the same way a datacenter <em>could</em> image the disks of any server. But that&rsquo;s a deliberate attack, not a business process. Nobody sees anything unless they actively come after you. For business-confidential work, that&rsquo;s a completely different world than tier 1.</p>
+        <p><strong>Tier 3: Confidential computing.</strong> The big clouds now rent machines where the memory — including the GPU&rsquo;s — is encrypted with keys the host never holds, and you can cryptographically <em>verify</em> the machine is in that state before you send a single byte. Even a subpoenaed operator gets scrambled noise from a memory dump. This is the only rented tier where &ldquo;they can&rsquo;t see it&rdquo; is a hardware guarantee instead of a promise. When a contract requires provable isolation — healthcare data, regulated industries — this is the tier the contract is asking for.</p>
+        <p><strong>Tier 4: Your own hardware.</strong> Nobody. Full stop. The ceiling is whatever machine you can afford, which is exactly why the other tiers exist.</p>
+        <h2 id="the-reality-check-on-big-models">The reality check on big models</h2>
+        <p>Here&rsquo;s where people get burned: the headline open models are enormous. The current monsters need eight top-end GPUs just to wake up — renting that runs $30–60+ an hour. Demo money, not daily-driver money.</p>
+        <p>The move that gets you 90% of the value: run a strong open model that fits on <strong>one</strong> rented GPU at $2–4 an hour, spun up when you need it, torn down when you don&rsquo;t. Same privacy architecture, one-tenth the cost. The gap between the best open model and the best one-GPU open model is much smaller than the gap between &ldquo;a company reads all my prompts&rdquo; and &ldquo;nobody does.&rdquo;</p>
+        <h2 id="how-i-actually-run-it">How I actually run it</h2>
+        <p>I don&rsquo;t pick one tier. I route by sensitivity:</p>
+        <ul>
+        <li><strong>Sensitive client data</strong> → a model on hardware I own. Smaller model, zero third parties. This handles more of the boring work than you&rsquo;d think.</li>
+        <li><strong>Heavy but confidential</strong> → rented dedicated GPU, my own model, reached over an encrypted tunnel, torn down after.</li>
+        <li><strong>Everything else</strong> → regular AI services, because for public-facing drafts and general questions, tier 1 is fine and it&rsquo;s the best-model-money-can-buy.</li>
+        </ul>
+        <p>Notice the theme. It&rsquo;s the same one I bring to every system I build: <strong>ownership</strong>. When the model runs on infrastructure you control, your data privacy isn&rsquo;t a clause in someone&rsquo;s terms of service — it&rsquo;s a property of the architecture. Nobody can leak what they never saw.</p>
+        <p>If you&rsquo;re feeding client data into AI tools and you&rsquo;ve never asked who&rsquo;s in the request path, that&rsquo;s worth an afternoon of your attention. And if you&rsquo;d rather someone just build the routing for you — that&rsquo;s literally what I do.</p>
+      </div>
+      <div class="tags" style="margin-top:18px"><span class="tag-chip">ai</span><span class="tag-chip">privacy</span><span class="tag-chip">ownership</span></div>
+      <aside class="post-cta">
+        <p class="eyebrow">Work with me</p>
+        <h3>Want this running in your business?</h3>
+        <p class="muted">Every engagement starts with a $999 assessment — we find your highest-leverage automations and a plan to start.</p>
+        <a class="btn btn-primary" href="https://calendly.com/jacobdart" target="_blank" rel="noopener">Book the assessment <span class="arr">&rarr;</span></a>
+      </aside>
+    </div>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/"><img class="mark" src="/assets/img/mark-light.svg" alt="" width="30" height="30"> Jacob Dart <span class="sub">J&amp;M AI Services</span></a>
+        <p>I turn owner-operators' repetitive work into calm, compounding systems they own — built for you, until it runs without you.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Work with me</h4>
+        <a href="/#pricing">The Assessment — $999</a>
+        <a href="/#pricing">Custom builds</a>
+        <a href="/#pricing">The Concierge</a>
+        <a href="https://calendly.com/jacobdart" target="_blank" rel="noopener">Book a call</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="/about/">About Jacob</a>
+        <a href="/#how">How it works</a>
+        <a href="/blog/">Writing</a>
+        <a href="mailto:yakobdart@gmail.com">yakobdart@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; <span id="yr">2026</span> J&amp;M AI Services LLC</span>
+      <span class="tag">Calm systems, compounding.</span>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
